@@ -1,8 +1,13 @@
 import { createContext, useState, useEffect } from 'react';
 
+import { client } from './ShopifyClient';
+
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+  
+  console.log(client);
+  
   const [cartItems, setCartItems] = useState(() => {
     try {
       const stored = localStorage.getItem('cart');

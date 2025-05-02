@@ -1,8 +1,8 @@
 import { createStorefrontApiClient } from '@shopify/storefront-api-client';
-import { PUBLIC_TOKEN } from '../key';
+import { PUBLIC_TOKEN, URL } from '../key';
 
 export const client = createStorefrontApiClient({
-  storeDomain: 'x00qwc-pe.myshopify.com',
+  storeDomain: URL,
   apiVersion: '2025-07',
   publicAccessToken: PUBLIC_TOKEN,
 });
